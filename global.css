@@ -1,0 +1,63 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a,
+button {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+:root {
+  font-family: "Comfortaa", cursive;
+  font-size: 10px;
+
+  --background: #17bebb;
+  --text: #fff;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+
+  background: var(--background);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  font-size: 6rem;
+  font-weight: 400;
+
+  max-width: 80rem;
+
+  text-align: center;
+
+  color: var(--text);
+}
+
+h1::after {
+  content: " |";
+
+  opacity: 1;
+
+  animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
